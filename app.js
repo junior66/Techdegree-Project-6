@@ -1,6 +1,6 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const startButton = document.querySelector('.btn_reset');
+const startButton = document.querySelector('.btn__reset');
 let missed = 0;
 
 const phrases = ['Tree House', 
