@@ -19,12 +19,27 @@ const getRandomPhraseAsArray = arr => {
 
 }
 
-console.log(getRandomPhraseAsArray(phrases));
+getRandomPhraseAsArray(phrases);
 
 // adds the letters of a string to the display
 const addPhraseToDisplay = arr => {
+    for(i = 0; i < phrases.length; i++) {
+        const li = document.createElement('li');
+        li.appendChild(phrases);
+        phrase.appendChild(li);
+    }
+    
+    if(phrases !== '') {
+        li.classList.add("letter");
+    }
 
 }
+
+const phraseArray = getRandomPhraseAsArray(phrases);
+addPhrasetoDisplay(phraseArray); 
+
+
+console.log(addPhraseToDisplay());
 
 // check if a letter is in the phrase
 const checkLetter = button => {
