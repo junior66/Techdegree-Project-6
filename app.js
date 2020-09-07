@@ -36,10 +36,9 @@ const addPhraseToDisplay = arr => {
 }
 
 const phraseArray = getRandomPhraseAsArray(phrases);
-addPhrasetoDisplay(phraseArray); 
+console.log(addPhraseToDisplay(phraseArray)); 
 
 
-console.log(addPhraseToDisplay());
 
 // check if a letter is in the phrase
 const checkLetter = button => {
