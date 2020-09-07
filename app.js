@@ -14,7 +14,7 @@ const phrases = ['Tree House',
 // return a random phrase from an array
 const getRandomPhraseAsArray = arr => {
     let randomNumber = Math.floor(Math.random() * phrases.length);
-    let randomPhrase = phrases[randomNumber];
+    let randomPhrase = phrases[randomNumber].split('');
     return randomPhrase;
 
 }
