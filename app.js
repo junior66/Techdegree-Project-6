@@ -13,7 +13,7 @@ const phrases = ['Tree House',
 
 // return a random phrase from an array
 const getRandomPhraseAsArray = arr => {
-    let randomNumber = Math.floor(Math.random() * phrases.length);
+    let randomNumber = Math.floor(Math.random() * arr.length);
     let randomPhrase = phrases[randomNumber].split('');
     return randomPhrase;
 
@@ -23,17 +23,18 @@ getRandomPhraseAsArray(phrases);
 
 // adds the letters of a string to the display
 const addPhraseToDisplay = arr => {
-    for(i = 0; i < phrases.length; i++) {
+    for(i = 0; i < arr.length; i++) {
         const li = document.createElement('li');
-        li.appendChild(phrases);
+        li.textContent = phrases[i];
         phrase.appendChild(li);
-    }
-    
-    if(phrases !== '') {
-        li.classList.add("letter");
+        if(phrases !== '') {
+            li.classList.add("letter");
+        } else {
+            li.classList.add('space');
+            }
+        }
     }
 
-}
 
 const phraseArray = getRandomPhraseAsArray(phrases);
 console.log(addPhraseToDisplay(phraseArray)); 
