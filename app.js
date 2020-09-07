@@ -25,14 +25,15 @@ getRandomPhraseAsArray(phrases);
 const addPhraseToDisplay = arr => {
     for(i = 0; i < arr.length; i++) {
         const li = document.createElement('li');
-        li.textContent = phrases[i];
+        li.textContent = arr[i];
         phrase.appendChild(li);
-        if(phrases !== '') {
+        if(arr[i] !== '') {
             li.classList.add("letter");
         } else {
             li.classList.add('space');
             }
         }
+        
     }
 
 
