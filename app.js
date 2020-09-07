@@ -38,7 +38,7 @@ const checkWin = () => {
 
 // listen for the start game button to be pressed
 startButton.addEventListener('click', () => {
-    startButton.style.display = 'hidden';
+    startButton.style.display = 'flex';
 
 
 });
