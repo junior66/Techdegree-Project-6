@@ -14,12 +14,12 @@ const phrases = ['Tree House',
 // return a random phrase from an array
 const getRandomPhraseAsArray = arr => {
     let randomNumber = Math.floor(Math.random() * phrases.length);
-    randomNumber = phrases[0];
-    return randomNumber;
+    let randomPhrase = phrases[randomNumber];
+    return randomPhrase;
 
 }
 
-console.log(getRandomPhraseAsArray(phrases[0]));
+console.log(getRandomPhraseAsArray(phrases));
 
 // adds the letters of a string to the display
 const addPhraseToDisplay = arr => {
