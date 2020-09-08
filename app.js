@@ -50,16 +50,16 @@ addPhraseToDisplay(phraseArray);
 
 // check if a letter is in the phrase
 const checkLetter = button => {
-    for(i = 0; i < button.length; i++) {
-       if(button.textContent(toLowerCase) === li.textContent(toLowerCase)) {
-        li[i].textContent.classList.add('show');
-       } else {
-        return null;
-       }
+    let li = ul.children;
+    let match = null;
+    for(i = 0; i < li.length; i++) {
+        if(button.textContent === li[i].textContent) {
+            li.classList.add("show");
+            match = button.textContent;
+            }
+        }
+        return match;
     }
-    let matched = li.textContent.classList.add('show');
-    return matched;
-}
 
 console.log(checkLetter(qwerty));
 
