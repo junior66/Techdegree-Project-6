@@ -13,6 +13,14 @@ const phrases = ['Tree House',
 
 ]
 
+// listen for the start game button to be pressed
+startButton.addEventListener('click', () => {
+    startButton.style.display = 'flex';
+
+
+});
+
+
 // return a random phrase from an array
 const getRandomPhraseAsArray = arr => {
     let randomNumber = Math.floor(Math.random() * arr.length);
@@ -22,26 +30,6 @@ const getRandomPhraseAsArray = arr => {
 }
 
 getRandomPhraseAsArray(phrases);
-
-// adds the letters of a string to the display
-const addPhraseToDisplay = arr => {
-    for(i = 0; i < arr.length; i++) {
-        li.textContent = arr[i];
-        ul.appendChild(li);
-        if(arr[i] !== '') {
-            li.classList.add("letter");
-        } else {
-            li.classList.add('space');
-            }
-        }
-        
-    }
-
-
-const phraseArray = getRandomPhraseAsArray(phrases);
-addPhraseToDisplay(phraseArray); 
-
-
 
 // check if a letter is in the phrase
 const checkLetter = button => {
@@ -58,19 +46,39 @@ const checkLetter = button => {
 
 console.log(checkLetter(qwerty));
 
+
+// adds the letters of a string to the display
+const addPhraseToDisplay = arr => {
+    for(i = 0; i < arr.length; i++) {
+        li.textContent = arr[i];
+        ul.appendChild(li);
+        if(arr[i] !== '') {
+            li.classList.add("letter");
+        } else {
+            li.classList.add('space');
+            }
+        }
+        
+    }
+
+const phraseArray = getRandomPhraseAsArray(phrases);
+addPhraseToDisplay(phraseArray); 
+
+
+    // listen for the onscreen keyboard to be clicked
+qwerty.addEventListener('click', e => {
+
+});
+
 // check if the game has been won or lost
 const checkWin = () => {
 
 }
 
-// listen for the start game button to be pressed
-startButton.addEventListener('click', () => {
-    startButton.style.display = 'flex';
 
 
-});
 
-// listen for the onscreen keyboard to be clicked
-qwerty.addEventListener('click', e => {
 
-});
+
+
+
