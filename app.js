@@ -31,22 +31,6 @@ const getRandomPhraseAsArray = arr => {
 
 getRandomPhraseAsArray(phrases);
 
-// check if a letter is in the phrase
-const checkLetter = button => {
-    for(i = 0; i < button; i++) {
-       if(button === li.letter) {
-        li.letter.classList.add('show');
-        let matched = li.letter.classList.add('show')
-        return matched;
-       } else {
-        return null;
-       }
-    }
-}
-
-console.log(checkLetter(qwerty));
-
-
 // adds the letters of a string to the display
 const addPhraseToDisplay = arr => {
     for(i = 0; i < arr.length; i++) {
@@ -64,6 +48,21 @@ const addPhraseToDisplay = arr => {
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray); 
 
+// check if a letter is in the phrase
+const checkLetter = button => {
+    for(i = 0; i < button.length; i++) {
+       if(button.textContent(toLowerCase) === li.textContent(toLowerCase)) {
+        li[i].textContent.classList.add('show');
+       } else {
+        return null;
+       }
+    }
+    let matched = li.textContent.classList.add('show');
+    return matched;
+}
+
+console.log(checkLetter(qwerty));
+
 
     // listen for the onscreen keyboard to be clicked
 qwerty.addEventListener('click', e => {
@@ -74,6 +73,8 @@ qwerty.addEventListener('click', e => {
 const checkWin = () => {
 
 }
+
+
 
 
 
