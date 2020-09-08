@@ -50,12 +50,12 @@ addPhraseToDisplay(phraseArray);
 
 // check if a letter is in the phrase
 const checkLetter = button => {
-    let phrase = ul.children;
+    let phraseLi = ul.children;
     let match = null;
-    for(i = 0; i < phrase.length; i++) {
-        const letter = phrase[i].textContent;
+    for(i = 0; i < phraseLi.length; i++) {
+        const letter = phraseLi[i].textContent;
         if(button === letter) {
-            phrase.classList.add("show");
+            phraseLi.classList.add("show");
             match = true;
             }
         }
