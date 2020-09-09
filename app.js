@@ -36,8 +36,10 @@ const addPhraseToDisplay = arr => {
     for(i = 0; i < arr.length; i++) {
         // create a new li element each time loop runs
         const li = document.createElement('li');
+        // add letters to the li elements
+        li.textContent = arr[i];
         ul.appendChild(li);
-        if(arr[i] !== '') {
+        if(arr[i] !== ' ') {
             li.classList.add("letter");
         } else {
             li.classList.add('space');
