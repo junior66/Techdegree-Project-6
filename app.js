@@ -1,6 +1,7 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const startButton = document.querySelector('.btn__reset');
+const overlay = document.getElementById('overlay');
 const ul = document.createElement('ul');
 const li = document.createElement('li');
 let missed = 0;
@@ -15,7 +16,7 @@ const phrases = ['Tree House',
 
 // listen for the start game button to be pressed
 startButton.addEventListener('click', () => {
-    startButton.style.display = 'flex';
+    overlay.style.display = 'none';
 
 
 });
