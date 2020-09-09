@@ -2,8 +2,7 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const startButton = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
-const ul = document.createElement('ul');
-const li = document.createElement('li');
+const ul = document.querySelector('#phrase ul')
 let missed = 0;
 
 const phrases = ['Tree House', 
@@ -35,7 +34,8 @@ getRandomPhraseAsArray(phrases);
 // adds the letters of a string to the display
 const addPhraseToDisplay = arr => {
     for(i = 0; i < arr.length; i++) {
-        li.textContent = arr[i];
+        // create a new li element each time loop runs
+        const li = document.createElement('li');
         ul.appendChild(li);
         if(arr[i] !== '') {
             li.classList.add("letter");
