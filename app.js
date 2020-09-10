@@ -72,15 +72,15 @@ console.log(checkLetter(qwerty));
 qwerty.addEventListener('click', e => {
     // Use a conditional to filter out clicks that don’t happen on the buttons or if the
     // button already has the “chosen” class
-    let keyboard = document.querySelectorAll('.keyrow button');
-    if() {
+    let button = document.querySelectorAll('.keyrow button');
+    if(e === button && e.className !== 'chosen') {
         // Add the “chosen” class to the button that was pressed.
-
+        e.classList.add('chosen');
         // Call the checkLetter function and store the results in a variable.
-
+        let results = checkLetter(match);
         // If the checkLetter function does not find a letter, remove one of the heart
         // images and increment the missed counter
-        if() {
+        if(results !== letter) {
 
         }
 
