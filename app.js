@@ -76,6 +76,7 @@ qwerty.addEventListener('click', e => {
     if(e === button && e.className !== 'chosen') {
         // Add the “chosen” class to the button that was pressed.
         e.classList.add('chosen');
+        e.disabled = true;
         // Call the checkLetter function and store the results in a variable.
         let results = checkLetter(match);
         // If the checkLetter function does not find a letter, remove one of the heart
