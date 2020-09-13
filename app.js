@@ -57,8 +57,8 @@ const checkLetter = button => {
     let match = null;
     for(i = 0; i < phraseLi.length; i++) {
         const letter = phraseLi[i].textContent;
-        if(button === letter) {
-            phraseLi.classList.add("show");
+        if(button.textContent === letter) {
+            phraseLi[i].classList.add("show");
             match = true;
             }
         }
