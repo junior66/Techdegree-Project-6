@@ -88,8 +88,6 @@ qwerty.addEventListener('click', e => {
 
         }
 
-    }
-
 
 
 });
