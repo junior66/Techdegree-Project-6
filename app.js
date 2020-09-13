@@ -56,7 +56,7 @@ const checkLetter = button => {
     let phraseLi = ul.children;
     let match = null;
     for(i = 0; i < phraseLi.length; i++) {
-        const letter = phraseLi[i].textContent.toUpperCase;
+        const letter = phraseLi[i].textContent.toLowerCase();
         if(button.textContent === letter) {
             phraseLi[i].classList.add("show");
             match = true;
