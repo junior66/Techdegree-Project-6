@@ -56,7 +56,7 @@ const checkLetter = button => {
     let phraseLi = ul.children;
     let match = null;
     for(i = 0; i < phraseLi.length; i++) {
-        const letter = phraseLi[i].textContent;
+        const letter = phraseLi[i].textContent.toUpperCase;
         if(button.textContent === letter) {
             phraseLi[i].classList.add("show");
             match = true;
@@ -65,7 +65,7 @@ const checkLetter = button => {
         return match;
     }
 
-console.log(checkLetter(qwerty));
+checkLetter(qwerty);
 
 
     // listen for the onscreen keyboard to be clicked
@@ -74,7 +74,7 @@ qwerty.addEventListener('click', e => {
     // button already has the “chosen” class
     if(e.target.tagName === 'BUTTON') {
         // Add the “chosen” class to the button that was pressed.
-        e.target.classList.add = 'chosen';
+        e.target.classList.add('chosen');
         e.target.setAttribute('disabled', true);
         // Call the checkLetter function and store the results in a variable.
         const match = checkLetter(e.target);
@@ -87,8 +87,6 @@ qwerty.addEventListener('click', e => {
         }
 
         }
-
-
 
 });
 
