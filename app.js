@@ -80,6 +80,7 @@ qwerty.addEventListener('click', e => {
         const match = checkLetter(e.target);
         // If the checkLetter function does not find a letter, remove one of the heart
         // images and increment the missed counter
+        
 
         }
 
