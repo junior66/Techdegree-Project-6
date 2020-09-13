@@ -92,6 +92,18 @@ qwerty.addEventListener('click', e => {
 
 // check if the game has been won or lost
 const checkWin = () => {
+    // Create a variable to store the li elements that have the class name “letter”
+    // Create a variable to store the li elements that have the class name “show”
+    // Check if the length of the 2 variables are the same. If they are, display the win
+    // overlay
+        // Create the win overlay by adding the “win” class to the start overlay.
+        // Change the headline text of the start overlay to show a person won.
+        // Change the display property of the overlay to “flex”
+    // Check if the missed counter is greater than 4. If they are, display the lose overlay
+        // Create the lose overlay by adding the “lose” class to the start overlay.
+        // Change the headline text of the start overlay to show a person lost.
+        // Change the display property of the overlay to “flex”
+
 
 }
 
