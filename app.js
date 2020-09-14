@@ -92,6 +92,10 @@ qwerty.addEventListener('click', e => {
 
 // check if the game has been won or lost
 const checkWin = () => {
+    for(e.target) {
+        checkWin();
+    }
+    
     // Create a variable to store the li elements that have the class name “letter”
     let letterPhrase = ul.getElementsByClassName('letter');
     // Create a variable to store the li elements that have the class name “show”
@@ -115,4 +119,5 @@ const checkWin = () => {
         // Change the display property of the overlay to “flex”
         overlay.style.display = 'flex';
     }
+    
 }
