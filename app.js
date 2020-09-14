@@ -93,7 +93,9 @@ qwerty.addEventListener('click', e => {
 // check if the game has been won or lost
 const checkWin = () => {
     // Create a variable to store the li elements that have the class name “letter”
+    let letterPhrase = ul.getElementsByClassName('letter');
     // Create a variable to store the li elements that have the class name “show”
+    let showPhrase = ul.getElementsByClassName('show');
     // Check if the length of the 2 variables are the same. If they are, display the win
     // overlay
         // Create the win overlay by adding the “win” class to the start overlay.
