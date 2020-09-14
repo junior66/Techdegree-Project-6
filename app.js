@@ -110,6 +110,10 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
         // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
+        // Display the game field
+        startButton.addEventListener('click', e => {
+            overlay.style.display = 'none';
+        });
     }
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
     if(missed > 4) {
@@ -121,6 +125,10 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
          // Create a reset button to play the game again
          overlay.querySelector('a').textContent = 'Play Again!';
+         // Display the game field
+        startButton.addEventListener('click', e => {
+            overlay.style.display = 'none';
+        });
     }
    
 }
