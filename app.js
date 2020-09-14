@@ -102,9 +102,9 @@ const checkWin = () => {
         // Create the win overlay by adding the “win” class to the start overlay.
         startButton.classList.add('win');
         // Change the headline text of the start overlay to show a person won.
-        winOverlay = document.querySelector('.btn__reset');
-        winOverlay.textContent = "Congratulations! You've won!"
+        overlay.getElementsByClassName('title').innerHTML = "Congratulations! You've won!"
         // Change the display property of the overlay to “flex”
+        overlay.style.display = 'flex';
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
         // Create the lose overlay by adding the “lose” class to the start overlay.
         // Change the headline text of the start overlay to show a person lost.
