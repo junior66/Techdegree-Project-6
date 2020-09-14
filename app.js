@@ -119,6 +119,8 @@ const checkWin = (e) => {
         overlay.querySelector('h2').textContent = "Sorry, You've lost :(";
         // Change the display property of the overlay to “flex”
         overlay.style.display = 'flex';
+         // Create a reset button to play the game again
+         overlay.querySelector('a').textContent = 'Play Again!';
     }
    
 }
