@@ -115,13 +115,3 @@ const checkWin = () => {
         overlay.style.display = 'flex';
 
     }
-
-}
-
-
-
-
-
-
-
-
