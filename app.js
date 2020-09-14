@@ -110,7 +110,7 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
         // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
-        
+        game__reset();
     }
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
     if(missed > 4) {
@@ -122,17 +122,23 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
          // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
+        game__reset();
         
     }
 
-    // Reset Game 
-    const game__reset = () => {
-        startButton.addEventListener('click', (e) => {
-          overlay.style.display = 'none';
-          qwerty.style.display = 'none';
-          missed = 0;  
-          addPhraseToDisplay(phraseArray); 
-        }
+    // Game Reset 
+    function game__reset() {
+        startButton.addEventListener('click', () => {
+            // recreate the buttons in the keyboard
+            qwerty;
+            // generate a new random phrase
+            getRandomPhraseAsArray
+            // set the number of misses to zero.
+            const tries = document.querySelectorAll('.tries');
+            tries[missed].style.display = 'none';
+
+            
+        })
     }
    
 }
