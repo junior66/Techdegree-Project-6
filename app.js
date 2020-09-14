@@ -85,16 +85,15 @@ qwerty.addEventListener('click', e => {
             tries[missed].style.display = 'none';
             missed++;
         }
-
+        if(e.target) {
+            return checkWin(e.target);
         }
+    }
 
 });
 
 // check if the game has been won or lost
-const checkWin = () => {
-    for(e.target) {
-        checkWin();
-    }
+const checkWin = (e) => {
     
     // Create a variable to store the li elements that have the class name “letter”
     let letterPhrase = ul.getElementsByClassName('letter');
@@ -106,7 +105,7 @@ const checkWin = () => {
         // Create the win overlay by adding the “win” class to the start overlay.
         overlay.classList.add('win');
         // Change the headline text of the start overlay to show a person won.
-        overlay.getElementsByClassName('title').textContent = "Congratulations! You've won!";
+        overlay.querySelector('h2').textContent = "Congratulations! You've won!";
         // Change the display property of the overlay to “flex”
         overlay.style.display = 'flex';
     }
@@ -115,9 +114,9 @@ const checkWin = () => {
         // Create the lose overlay by adding the “lose” class to the start overlay.
         startButton.classList.add('lose');
         // Change the headline text of the start overlay to show a person lost.
-        overlay.getElementsByClassName('title').textContent = "Sorry, You've lost :(";
+        overlay.querySelector('h2').textContent = "Sorry, You've lost :(";
         // Change the display property of the overlay to “flex”
         overlay.style.display = 'flex';
     }
-    
+   
 }
