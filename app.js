@@ -110,25 +110,29 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
         // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
-        // Display the game field
-        startButton.addEventListener('click', e => {
-            overlay.style.display = 'none';
-        });
+        
     }
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
     if(missed > 4) {
         // Create the lose overlay by adding the “lose” class to the start overlay.
-        startButton.classList.add('lose');
+        overlay.classList.add('lose');
         // Change the headline text of the start overlay to show a person lost.
         overlay.querySelector('h2').textContent = "Sorry, You've lost :(";
         // Change the display property of the overlay to “flex”
         overlay.style.display = 'flex';
          // Create a reset button to play the game again
-         overlay.querySelector('a').textContent = 'Play Again!';
-         // Display the game field
-        startButton.addEventListener('click', e => {
-            overlay.style.display = 'none';
-        });
+        overlay.querySelector('a').textContent = 'Play Again!';
+        
+    }
+
+    // Reset Game 
+    const game__reset = () => {
+        startButton.addEventListener('click', (e) => {
+          overlay.style.display = 'none';
+          qwerty.style.display = 'none';
+          missed = 0;  
+          addPhraseToDisplay(phraseArray); 
+        }
     }
    
 }
