@@ -98,6 +98,7 @@ const checkWin = () => {
     let showPhrase = ul.getElementsByClassName('show');
     // Check if the length of the 2 variables are the same. If they are, display the win
     // overlay
+    if(letterPhrase.length === showPhrase.length) {
         // Create the win overlay by adding the “win” class to the start overlay.
         // Change the headline text of the start overlay to show a person won.
         // Change the display property of the overlay to “flex”
@@ -105,7 +106,7 @@ const checkWin = () => {
         // Create the lose overlay by adding the “lose” class to the start overlay.
         // Change the headline text of the start overlay to show a person lost.
         // Change the display property of the overlay to “flex”
-
+    }
 
 }
 
