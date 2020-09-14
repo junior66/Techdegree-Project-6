@@ -108,6 +108,8 @@ const checkWin = (e) => {
         overlay.querySelector('h2').textContent = "Congratulations! You've won!";
         // Change the display property of the overlay to “flex”
         overlay.style.display = 'flex';
+        // Create a reset button to play the game again
+        overlay.querySelector('a').textContent = 'Play Again!';
     }
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
     if(missed > 4) {
