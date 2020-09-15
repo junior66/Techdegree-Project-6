@@ -139,7 +139,7 @@ function resetGame() {
     ul.innerHTML = '';
     
     addPhraseToDisplay(getRandomPhraseAsArray(phrases));
-    let liveHeart = null;
+    let liveHeart;
     for (let i = 0; i < liveHeart.length; i++) {
         liveHeart[i].className = 'tries';
         triesImg[i].src = 'images/liveHeart.png';
