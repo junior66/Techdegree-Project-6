@@ -110,7 +110,7 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
         // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
-        game__reset();
+        
     }
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
     if(missed > 4) {
@@ -122,7 +122,7 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
          // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
-        game__reset();
+        
         
     }
 
@@ -132,10 +132,10 @@ function game__reset() {
  let keyboard = qwerty.querySelectorAll('.keyrow button ');
  keyboard.classList.remove('chosen');
  keyboard.setAttribute('disabled', false);   
- startButton.addEventListener('click', () => {
-    overlay.style.display = 'none';
+// startButton.addEventListener('click', () => {
+//     overlay.style.display = 'none';
 
-});
+// }); 
 
 
 }
