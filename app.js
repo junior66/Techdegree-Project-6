@@ -126,19 +126,33 @@ const checkWin = (e) => {
         
     }
 
-    // Game Reset 
-    function game__reset() {
-        startButton.addEventListener('click', () => {
-            // recreate the buttons in the keyboard
-            qwerty.style.display = ' ';
-            // generate a new random phrase
-            getRandomPhraseAsArray();
-            // set the number of misses to zero.
-            const tries = document.querySelectorAll('.tries');
-            tries[missed].style.display = 'none';
-
-            
-        })
-    }
-   
 }
+
+function game__reset() {
+ let keyboard = qwerty.querySelectorAll('.keyrow button ');
+ keyboard.classList.remove('chosen');
+ keyboard.setAttribute('disabled', false);   
+ startButton.addEventListener('click', () => {
+    overlay.style.display = 'none';
+
+});
+
+
+}
+
+startButton.addEventListener('click', () => {
+    if (startButton.textContent === 'Start Game') {
+        overlay.style.display = 'none';
+    }
+    if (startButton.textContent === 'Play Again') {
+        game__reset();
+    }
+     
+    
+})
+
+
+
+
+
+
