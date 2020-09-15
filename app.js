@@ -139,25 +139,15 @@ function resetGame() {
     ul.innerHTML = '';
     
     addPhraseToDisplay(getRandomPhraseAsArray(phrases));
-    let liveHeart;
+    
+    const liveHeart = document.getElementsByTagName('img');
     for (let i = 0; i < liveHeart.length; i++) {
-        liveHeart[i].className = 'tries';
-        triesImg[i].src = 'images/liveHeart.png';
+        const tries = document.querySelectorAll('.tries');
+        tries++;
+        liveHeart[i].src = 'images/liveHeart.png';
         missed = 0;
     }
 }
-
-// startButton.addEventListener('click', () => {
-//     if (startButton.textContent === 'Start Game') {
-//         overlay.style.display = 'none';
-//     }
-//     if (startButton.textContent === 'Play Again') {
-//         resetGame();
-//     }
-     
-    
-// })
-
 
 
 
