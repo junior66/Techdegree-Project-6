@@ -123,7 +123,7 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
          // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
-        
+        resetGame();
         
     }
 
@@ -135,8 +135,11 @@ function resetGame() {
         keyboardBtn[i].className = '';
         keyboardBtn[i].disabled = false;
     }
-    // phraseUL.innerHTML = '';
+    
+    ul.innerHTML = '';
+    
     addPhraseToDisplay(getRandomPhraseAsArray(phrases));
+    let liveHeart = null;
     for (let i = 0; i < liveHeart.length; i++) {
         liveHeart[i].className = 'tries';
         triesImg[i].src = 'images/liveHeart.png';
