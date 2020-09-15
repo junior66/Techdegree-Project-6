@@ -110,7 +110,8 @@ const checkWin = (e) => {
         overlay.style.display = 'flex';
         // Create a reset button to play the game again
         overlay.querySelector('a').textContent = 'Play Again!';
-        
+        resetGame();
+
     }
     // Check if the missed counter is greater than 4. If they are, display the lose overlay
     if(missed > 4) {
@@ -128,28 +129,31 @@ const checkWin = (e) => {
 
 }
 
-function game__reset() {
- let keyboard = qwerty.querySelectorAll('.keyrow button ');
- keyboard.classList.remove('chosen');
- keyboard.setAttribute('disabled', false);   
-// startButton.addEventListener('click', () => {
-//     overlay.style.display = 'none';
-
-// }); 
-
-
+function resetGame() {
+    let keyboardBtn = document.querySelectorAll('.keyrow button');
+    for (let i = 0; i < keyboardBtn.length; i++) {
+        keyboardBtn[i].className = '';
+        keyboardBtn[i].disabled = false;
+    }
+    // phraseUL.innerHTML = '';
+    addPhraseToDisplay(getRandomPhraseAsArray(phrases));
+    for (let i = 0; i < liveHeart.length; i++) {
+        liveHeart[i].className = 'tries';
+        triesImg[i].src = 'images/liveHeart.png';
+        missed = 0;
+    }
 }
 
-startButton.addEventListener('click', () => {
-    if (startButton.textContent === 'Start Game') {
-        overlay.style.display = 'none';
-    }
-    if (startButton.textContent === 'Play Again') {
-        game__reset();
-    }
+// startButton.addEventListener('click', () => {
+//     if (startButton.textContent === 'Start Game') {
+//         overlay.style.display = 'none';
+//     }
+//     if (startButton.textContent === 'Play Again') {
+//         resetGame();
+//     }
      
     
-})
+// })
 
 
 
