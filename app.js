@@ -141,11 +141,12 @@ function resetGame() {
     addPhraseToDisplay(getRandomPhraseAsArray(phrases));
     
     const liveHeart = document.getElementsByTagName('img');
+    // Each time loop runs, add a missing heart, up to 5 hearts.
     for (let i = 0; i < liveHeart.length; i++) {
-        const tries = document.querySelectorAll('.tries');
-        tries++;
-        liveHeart[i].src = 'images/liveHeart.png';
-        missed = 0;
+        let tries = document.querySelectorAll('.tries');
+        missed--;
+        tries[missed].style.display = 'inline';
+        
     }
 }
 
