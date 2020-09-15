@@ -130,7 +130,7 @@ const checkWin = (e) => {
     function game__reset() {
         startButton.addEventListener('click', () => {
             // recreate the buttons in the keyboard
-            qwerty.style.display = 'block';
+            qwerty.style.display = ' ';
             // generate a new random phrase
             getRandomPhraseAsArray();
             // set the number of misses to zero.
