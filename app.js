@@ -144,10 +144,12 @@ function resetGame() {
     // Each time loop runs, add a missing heart, up to 5 hearts.
     for (let i = 0; i < liveHeart.length; i++) {
         let tries = document.querySelectorAll('.tries');
-        missed--;
-        tries[missed].style.display = 'inline';
-        
+        tries[i].style.display = 'inline';  
+        console.log(tries); 
     }
+    missed = 0;
+
+    
 }
 
 
